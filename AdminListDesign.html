@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        
+    <title>Document</title>
+</head>
+<style>
+    /* div{
+        margin-top: 50px;
+    }
+    h1{
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 50px;
+        
+    } */
+    body{
+        background-color: #56baed;
+    }
+    /* .log{
+        margin-left: 1200px;  
+       /* margin-top: auto; */
+     /* background-color:rgb(42, 105, 141) ; 
+     color: white;
+     font-size: 20px;
+     font-weight: bold;
+     cursor: pointer;
+    } */ */
+    option{
+        font-size: 15px;
+        
+    }
+    select{
+        margin: 127px;
+        height: 30px;
+        
+    }
+    
+   .next
+   {
+    margin-left: 240px;
+        height: 30px;
+        width: 70px;
+        background-color: lightgreen;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        color: black;
+        
+   }
+    .list{
+        /* margin: 50px; */
+        background-color: white;
+        width: 900px;
+        height: 300px;
+        margin-left: 350px;
+        margin-top: 130px;
+       
+        
+    }
+    /* select{
+        background-color: aqua;
+        border: none;
+    } */
+    /* select:hover{
+        background: green;
+    } */
+    .list{
+        /* margin: 50px; */
+       
+        box-shadow: 2px 2px 2px 2px #888888;
+        border-radius: 10px;
+
+        
+    }
+   select, option{
+        margin: 50px;
+        background-color: khaki;
+    }
+    ul li{
+        list-style: none;
+    }
+    ul li
+   {
+    list-style: none;
+   }
+   .header
+   {
+    border: 1px solid black;
+    box-shadow: 2px 2px 2px 2px;
+   }
+</style>
+<body>
+    <script>
+        function goto(){
+                 alert("go to selected admin view page");  
+                 window.location.href= "AdminDisplay.html"
+                
+            }
+            function back(){
+                 alert("move to back page");  
+                 window.location.href= "AdminRole2.html"
+                
+            }
+            function home()
+        {
+            alert("redirecting to home page")
+            window.location.href = "AdminRole2.html"    
+        }
+        function logout()
+        {
+            alert("sucessfully logged out")
+            window.location.href = "login.html#"
+        }
+    </script>
+ 
+    <div class="header">
+        <ul class="headerul">
+            <li><img src="chiselonlogo.png" alt="" style="height: 50px; width: 50px; margin-left: 90px; margin-top: 30px;"></li>
+            <li><button class='btn btn-primary pull-right' onclick="home()" style="margin-right: 1200px; margin-top: -40px;">Home </button></li>
+            <!-- <li><h1 style="margin-left: 400px; margin-top: -40px; color: #fff;">HELLO ADMIN, WELCOME TO CRPO</h1></li> -->
+            <li><button class='btn btn-success pull-right' onclick="logout()" style="margin-right: 80px; margin-top: -55px;">Logout </button></li>
+        </ul>
+    </div>
+    <div class="list">
+        <select>
+            <option value="#">...Admin List...</option>
+            <option value="#">Admin1</option>
+            <option value="#">Admin2</option>
+            <option value="#">Admin3</option>
+            <option value="#">Admin4</option>
+            <option value="#">Admin5</option>
+           </select> <br> <br> <br>
+          <!-- <div> -->
+            <!-- <button class="next" onclick="goto()">Next</button> -->
+
+            <button type="button" class="btn btn-success" onclick="goto()" style="margin-left: 220px; margin-top: 50px;">Next</button>
+            <!-- <button class="next" onclick="back()">Back</button> -->
+            <button type="button" class="btn btn-primary" onclick="back()" style="margin-left: 430px; margin-top: 50px;" >Back</button>
+          <!-- </div> -->
+
+    </div>
+   
+</body>
+</html>
