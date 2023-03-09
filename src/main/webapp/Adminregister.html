@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <title>Admin Registration Form</title>
+</head>
+<style>
+    body {
+        background-color: #56baed;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    ul li {
+        list-style: none;
+    }
+
+    #success_message {
+        display: none;
+    }
+
+    .container {
+        height: 10px;
+        width: 780px;
+        margin-top: -15px;
+
+    }
+
+</style>
+
+<body>
+    <div class="header">
+        <ul class="headerul">
+            <li><img src="chiselonlogo.png" alt=""
+                    style="height: 50px; width: 50px; margin-left: 90px; margin-top: 30px;"></li>
+            <li><button class='btn btn-primary pull-right' onclick="home()"
+                    style="margin-right: 1200px; margin-top: -40px;">Home </button></li>
+            <!-- <li><h1 style="margin-left: 400px; margin-top: -40px; color: #fff;">HELLO ADMIN, WELCOME TO CRPO</h1></li> -->
+            <li><button class='btn btn-success pull-right' onclick="logout()"
+                    style="margin-right: 80px; margin-top: -55px;">Logout </button></li>
+        </ul>
+    </div>
+
+    <div class="container">
+
+        <form name="form" class="well form-horizontal" action=" " method="post" id="contact_form">
+            <fieldset>
+
+                <!-- Form Name -->
+                <legend>
+                    <h2><b> Add New Admin Form</b></h2>
+                </legend><br>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Employee ID</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="emp_id" placeholder="Emp id" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="First Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Last Name</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Last Name" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+   
+                <div class="form-group">
+                     <label class="col-md-4 control-label">E-Mail</label>
+                     <div class="col-md-4 inputGroupContainer">
+                         <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input name="email" placeholder="E-Mail Address" class="form-control" type="text">
+                         </div>
+                     </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Contact No.</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="contact_no" placeholder="(+91)" class="form-control" type="n">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Password</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input id="user_password" name="user_password" placeholder="Password" class="form-control" type="password">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Confirm Password</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="confirm_password" placeholder="Confirm Password" class="form-control"
+                                type="password">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Input -->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Department</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="department" class="form-control selectpicker">
+                                <option value="">Select your Department</option>
+                                <option>Department 1</option>
+                                <option> Department 2</option>
+                                <option>Department 3</option>
+                                <option>Department 4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Success message -->
+                <div class="alert alert-success" role="alert" id="success_message">Success <i
+                        class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4"><br>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button onclick="add()" type="submit"
+                            class="btn btn-success">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Create Admin
+                            <span></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="Adminregister.js"></script>
+    <script>
+        
+    function add(){
+        alert('sucessfully added admin');
+    }
+    </script>
+</body>
+
+</html>
+<!-- class="glyphicon glyphicon-send" -->
